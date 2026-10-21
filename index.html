@@ -1,17 +1,44 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fungroo | Discover Real-World Projects for Teens</title>
+    <title>Fungroo | Discover Projects & Build Real-World Skills</title>
 
-    <meta name="description" content="Explore real-world projects, develop new skills and gain practical experience with Fungroo. Start your journey towards a brighter future.">
-<link rel="canonical" href="https://rehannaqvi986-ctrl.github.io/fungroo-project/">
+    <meta name="description"
+          content="Explore real-world projects, develop practical skills, gain experience, and prepare for your future with Fungroo. Start learning by doing.">
+
     <meta name="robots" content="index, follow">
 
-    <meta name="theme-color" content="#123D2A">
+    <link rel="canonical"
+          href="https://rehannaqvi986-ctrl.github.io/fungroo-project/index.html">
+
+    <meta name="theme-color" content="#073b2a">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+          content="Fungroo | Discover Projects & Build Real-World Skills">
+    <meta property="og:description"
+          content="Discover projects, develop practical skills, and prepare for your future with Fungroo.">
+    <meta property="og:url"
+          content="https://rehannaqvi986-ctrl.github.io/fungroo-project/index.html">
+    <meta property="og:site_name" content="Fungroo">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fungroo | Learn by Doing">
+    <meta name="twitter:description"
+          content="Explore projects and develop real-world skills with Fungroo.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fungroo",
+      "url": "https://rehannaqvi986-ctrl.github.io/fungroo-project/",
+      "description": "A platform to discover projects, develop practical skills, and gain real-world experience."
+    }
+    </script>
 
     <style>
         * {
@@ -21,12 +48,13 @@
         }
 
         :root {
-            --green: #123D2A;
-            --green-light: #EAF4E9;
-            --lime: #C8F169;
-            --text: #193329;
-            --muted: #65756C;
-            --white: #FFFFFF;
+            --green: #073b2a;
+            --light-green: #dff5e8;
+            --accent: #a5f3c5;
+            --white: #ffffff;
+            --text: #26372f;
+            --muted: #64756c;
+            --background: #f7faf7;
         }
 
         html {
@@ -35,9 +63,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
             color: var(--text);
-            background: var(--white);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         a {
@@ -45,23 +73,20 @@
         }
 
         .container {
-            width: 84%;
-            max-width: 1200px;
+            width: min(1120px, 90%);
             margin: auto;
         }
 
-        /* NAVIGATION */
-
         header {
             background: var(--white);
-            border-bottom: 1px solid #E8EEE9;
+            border-bottom: 1px solid #e4ece6;
             position: sticky;
             top: 0;
             z-index: 10;
         }
 
         nav {
-            min-height: 82px;
+            min-height: 76px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -69,243 +94,158 @@
         }
 
         .logo {
+            font-size: 29px;
+            font-weight: 800;
             color: var(--green);
-            font-size: 31px;
-            font-weight: 900;
-            letter-spacing: -1.5px;
-        }
-
-        .logo span {
-            color: #76A83C;
+            letter-spacing: -1px;
         }
 
         .nav-links {
             display: flex;
+            gap: 26px;
             align-items: center;
-            gap: 30px;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: var(--text);
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
-            color: #548B36;
-        }
-
-        .nav-button {
-            background: var(--green);
-            color: white !important;
-            padding: 12px 21px;
-            border-radius: 8px;
-        }
-
-        /* HERO SECTION */
-
-        .hero {
-            background: var(--green-light);
-            padding: 85px 0;
-            overflow: hidden;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            align-items: center;
-            gap: 55px;
-        }
-
-        .eyebrow {
-            display: inline-block;
-            background: #D8EBCF;
-            color: var(--green);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            padding: 9px 15px;
-            border-radius: 30px;
-            margin-bottom: 22px;
-        }
-
-        h1 {
-            font-size: clamp(38px, 5vw, 61px);
-            line-height: 1.12;
-            letter-spacing: -2px;
-            color: var(--green);
-            margin-bottom: 24px;
-        }
-
-        h1 span {
-            color: #659A3D;
-        }
-
-        .hero-description {
-            color: var(--muted);
-            font-size: 17px;
-            max-width: 530px;
-            margin-bottom: 30px;
-        }
-
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
+            color: #16804e;
         }
 
         .button {
             display: inline-block;
+            padding: 13px 23px;
+            border-radius: 9px;
             background: var(--green);
             color: white;
-            padding: 15px 23px;
-            border-radius: 9px;
-            font-size: 14px;
             font-weight: 700;
+            border: 2px solid var(--green);
             transition: 0.2s;
         }
 
         .button:hover {
-            background: #245B3D;
+            background: #10573e;
+            border-color: #10573e;
             transform: translateY(-2px);
         }
 
-        .button-outline {
+        .button-light {
             background: transparent;
             color: var(--green);
-            border: 1px solid #A6BBA9;
         }
 
-        .button-outline:hover {
+        .button-light:hover {
             color: white;
         }
 
-        /* HERO VISUAL */
-
-        .visual {
-            min-height: 350px;
-            background: var(--green);
-            border-radius: 28px;
-            padding: 28px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .circle {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            background: #28583D;
-            position: absolute;
-            right: -55px;
-            top: -55px;
-        }
-
-        .visual-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .visual-icon {
-            font-size: 65px;
-            margin-bottom: 18px;
-        }
-
-        .visual h2 {
+        .hero {
+            background: linear-gradient(135deg, #073b2a, #116747);
             color: white;
-            font-size: 30px;
-            line-height: 1.25;
-            margin-bottom: 12px;
+            padding: 100px 0;
         }
 
-        .visual p {
-            color: #D4E6D7;
-            font-size: 15px;
+        .hero-content {
+            max-width: 780px;
         }
 
-        .mini-card {
-            margin-top: 25px;
-            padding: 15px;
-            border-radius: 12px;
-            background: #FFFFFF;
-            display: flex;
-            align-items: center;
-            gap: 13px;
-            color: var(--green);
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.13);
+            color: var(--accent);
+            font-size: 13px;
             font-weight: 700;
-            font-size: 14px;
+            margin-bottom: 22px;
         }
 
-        .mini-icon {
-            background: var(--lime);
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 22px;
+        h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.13;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
         }
 
-        /* BENEFITS */
+        .hero p {
+            max-width: 650px;
+            color: #e0f2e7;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-        .section {
-            padding: 85px 0;
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .hero .button {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--green);
+        }
+
+        .hero .button-light {
+            background: transparent;
+            border-color: #a8d9bc;
+            color: white;
+        }
+
+        section {
+            padding: 76px 0;
         }
 
         .section-heading {
             text-align: center;
-            max-width: 650px;
-            margin: 0 auto 45px;
+            max-width: 700px;
+            margin: 0 auto 42px;
         }
 
         .section-heading h2 {
-            font-size: clamp(29px, 4vw, 42px);
-            line-height: 1.2;
+            font-size: clamp(28px, 4vw, 39px);
+            line-height: 1.25;
             color: var(--green);
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .section-heading p {
             color: var(--muted);
-            font-size: 16px;
         }
 
-        .cards {
+        .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 22px;
         }
 
         .card {
-            border: 1px solid #E4EBE4;
-            padding: 30px;
-            border-radius: 18px;
-            transition: 0.25s;
             background: white;
+            border: 1px solid #e4ece6;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(7,59,42,0.04);
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px #123D2A12;
-            border-color: #B6D0B4;
-        }
-
-        .card-icon {
-            width: 58px;
-            height: 58px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: var(--green-light);
-            border-radius: 15px;
-            font-size: 28px;
-            margin-bottom: 22px;
+        .icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--light-green);
+            font-size: 23px;
+            margin-bottom: 20px;
         }
 
         .card h3 {
             color: var(--green);
-            font-size: 21px;
-            margin-bottom: 12px;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
         .card p {
@@ -313,172 +253,89 @@
             font-size: 15px;
         }
 
-        /* HOW IT WORKS */
-
-        .how-section {
-            background: #F7FAF6;
-        }
-
         .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .step {
-            text-align: center;
-            padding: 25px;
+            background: #edf6ef;
         }
 
         .step-number {
-            width: 55px;
-            height: 55px;
-            background: var(--lime);
-            color: var(--green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 22px;
-            font-weight: 900;
-        }
-
-        .step h3 {
-            color: var(--green);
+            font-size: 34px;
+            font-weight: 800;
+            color: #299563;
             margin-bottom: 10px;
         }
 
-        .step p {
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-        /* CTA */
-
         .cta {
-            padding: 75px 25px;
             background: var(--green);
+            color: white;
             text-align: center;
-            border-radius: 24px;
-            margin-top: 10px;
-            margin-bottom: 75px;
+            padding: 70px 25px;
+            border-radius: 20px;
         }
 
         .cta h2 {
-            color: white;
             font-size: clamp(28px, 4vw, 40px);
             margin-bottom: 15px;
         }
 
         .cta p {
-            color: #D4E6D7;
-            margin-bottom: 27px;
+            color: #dcefe4;
+            margin-bottom: 25px;
         }
 
         .cta .button {
-            background: var(--lime);
+            background: var(--accent);
             color: var(--green);
+            border-color: var(--accent);
         }
-
-        /* FOOTER */
 
         footer {
-            border-top: 1px solid #E8EEE9;
-            padding: 30px 0;
+            background: #05291e;
+            color: #dce9e0;
+            padding: 35px 0;
+            margin-top: 75px;
         }
 
-        .footer-inner {
+        .footer-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        footer p {
-            color: var(--muted);
-            font-size: 13px;
+            align-items: center;
         }
 
         footer a {
-            color: var(--green);
-            font-weight: 700;
-            font-size: 13px;
+            color: white;
         }
 
-        /* MOBILE RESPONSIVE DESIGN */
-
-        @media (max-width: 800px) {
-            .container {
-                width: 90%;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .visual {
-                min-height: 300px;
-            }
-
-            .cards,
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-
-            .nav-links {
-                gap: 13px;
-            }
+        footer p {
+            font-size: 14px;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 760px) {
             nav {
-                padding: 17px 0;
+                padding: 15px 0;
                 align-items: flex-start;
                 flex-direction: column;
             }
 
-            .logo {
-                font-size: 28px;
-            }
-
             .nav-links {
-                width: 100%;
-                flex-wrap: wrap;
+                gap: 14px;
             }
 
             .hero {
+                padding: 72px 0;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
                 padding: 55px 0;
             }
 
             h1 {
-                font-size: 39px;
-            }
-
-            .button {
-                text-align: center;
-            }
-
-            .button-group .button {
-                width: 100%;
-            }
-
-            .visual {
-                padding: 24px;
-            }
-
-            .card {
-                padding: 25px;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                align-items: flex-start;
+                letter-spacing: -1px;
             }
         }
     </style>
@@ -486,215 +343,160 @@
 
 <body>
 
-    <header>
-        <nav class="container">
-            <a class="logo" href="index.html" aria-label="Fungroo Home">
-                fungroo<span>.</span>
-            </a>
+<header>
+    <nav class="container" aria-label="Main navigation">
+        <a class="logo" href="index.html">Fungroo.</a>
 
-            <div class="nav-links">
-                <a href="index.html">Teen</a>
-                <a href="company.html">Company</a>
-                <a class="nav-button" href="#opportunities">Explore Projects</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <section class="hero">
-            <div class="container hero-grid">
-
-                <div>
-                    <div class="eyebrow">LEARN • CREATE • GROW</div>
-
-                    <h1>
-                        Your Skills Can Take You <span>Further.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        Discover exciting projects, explore your interests
-                        and develop skills for the real world. Start learning
-                        by doing and take the first step towards your future
-                        with Fungroo.
-                    </p>
-
-                    <div class="button-group">
-                        <a class="button" href="#opportunities">
-                            Discover Opportunities →
-                        </a>
-
-                        <a class="button button-outline" href="company.html">
-                            For Companies
-                        </a>
-                    </div>
-                </div>
-
-                <div class="visual">
-                    <div class="circle"></div>
-
-                    <div class="visual-content">
-                        <div class="visual-icon">🌱</div>
-
-                        <h2>Small Steps.<br>Big Possibilities.</h2>
-
-                        <p>
-                            Learn something new, build your abilities
-                            and keep moving forward.
-                        </p>
-
-                        <div class="mini-card">
-                            <div class="mini-icon">💡</div>
-                            <div>
-                                <div>Discover Your Potential</div>
-                                <small>Make learning practical</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section" id="opportunities">
-            <div class="container">
-
-                <div class="section-heading">
-                    <h2>Build Skills Beyond the Classroom</h2>
-
-                    <p>
-                        Explore practical learning experiences that help
-                        you discover your interests and develop new abilities.
-                    </p>
-                </div>
-
-                <div class="cards">
-
-                    <article class="card">
-                        <div class="card-icon">🎯</div>
-
-                        <h3>Explore Real Projects</h3>
-
-                        <p>
-                            Discover project-based opportunities and learn
-                            how your ideas and skills can be applied
-                            to real-world challenges.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">🚀</div>
-
-                        <h3>Develop Useful Skills</h3>
-
-                        <p>
-                            Improve your creativity, communication,
-                            problem-solving and digital skills through
-                            practical learning experiences.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">🌟</div>
-
-                        <h3>Grow With Confidence</h3>
-
-                        <p>
-                            Build experience, discover your strengths
-                            and prepare yourself for future academic
-                            and professional opportunities.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="section how-section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <h2>Your Journey Starts Here</h2>
-
-                    <p>
-                        Every new skill starts with curiosity.
-                        Take your next step with a learning mindset.
-                    </p>
-                </div>
-
-                <div class="steps">
-
-                    <div class="step">
-                        <div class="step-number">01</div>
-
-                        <h3>Discover</h3>
-
-                        <p>
-                            Explore your interests and identify
-                            the skills you want to develop.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">02</div>
-
-                        <h3>Learn by Doing</h3>
-
-                        <p>
-                            Practice your skills through projects
-                            and hands-on learning experiences.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">03</div>
-
-                        <h3>Keep Growing</h3>
-
-                        <p>
-                            Reflect on your progress and continue
-                            improving your knowledge and abilities.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <section class="cta">
-                <h2>Ready to Discover What's Possible?</h2>
-
-                <p>
-                    Start exploring new skills and practical
-                    learning opportunities with Fungroo.
-                </p>
-
-                <a class="button" href="#opportunities">
-                    Explore Your Potential →
-                </a>
-            </section>
+        <div class="nav-links">
+            <a href="index.html">For Teens</a>
+            <a href="company.html">For Companies</a>
+            <a href="#opportunities">Explore</a>
+            <a href="#how-it-works">How It Works</a>
         </div>
+    </nav>
+</header>
 
-    </main>
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge">YOUR FUTURE STARTS HERE</span>
 
-    <footer>
-        <div class="container footer-inner">
-
-            <a class="logo" href="index.html">
-                fungroo<span>.</span>
-            </a>
+            <h1>Build Skills Beyond the Classroom.</h1>
 
             <p>
-                Student website design project. Created for learning
-                and demonstration purposes.
+                Discover real-world projects, develop practical skills,
+                explore your interests, and prepare for your future.
+                With Fungroo, learning goes beyond textbooks.
             </p>
 
-            <a href="company.html">Explore Company Page →</a>
+            <div class="hero-buttons">
+                <a class="button" href="#opportunities">
+                    Explore Opportunities →
+                </a>
 
+                <a class="button button-light" href="#how-it-works">
+                    How It Works
+                </a>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="opportunities">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Turn Your Interests Into Real Skills</h2>
+                <p>
+                    Discover different ways to learn, practise, and
+                    develop abilities that can help you in the future.
+                </p>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <div class="icon" aria-hidden="true">💻</div>
+                    <h3>Technology Projects</h3>
+                    <p>
+                        Explore technology-based projects and practise
+                        problem-solving, digital tools, and creative thinking.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon" aria-hidden="true">🎨</div>
+                    <h3>Creative Skills</h3>
+                    <p>
+                        Discover design, content creation, communication,
+                        and other creative areas through practical activities.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon" aria-hidden="true">🚀</div>
+                    <h3>Career Exploration</h3>
+                    <p>
+                        Learn about different industries, understand
+                        real-world challenges, and explore future career paths.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps" id="how-it-works">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Your Learning Journey</h2>
+                <p>
+                    Start with your interests and gradually build
+                    knowledge through practical experience.
+                </p>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <div class="step-number">01</div>
+                    <h3>Discover</h3>
+                    <p>
+                        Explore subjects, activities, and projects
+                        that match your interests.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="step-number">02</div>
+                    <h3>Learn by Doing</h3>
+                    <p>
+                        Develop your abilities by practising skills
+                        and working on meaningful projects.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="step-number">03</div>
+                    <h3>Grow</h3>
+                    <p>
+                        Reflect on your experience, improve your skills,
+                        and prepare for future opportunities.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cta">
+                <h2>Ready to Explore Your Potential?</h2>
+                <p>
+                    Take the next step towards practical learning
+                    and personal growth.
+                </p>
+                <a class="button" href="company.html">
+                    Discover Fungroo for Companies →
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <a class="logo" href="index.html" style="color:#a5f3c5;">
+            Fungroo.
+        </a>
+
+        <p>
+            Explore projects. Build skills. Grow your future.
+        </p>
+
+        <p>
+            <a href="index.html">Teens</a> ·
+            <a href="company.html">Companies</a>
+        </p>
+
+        <p>© 2026 Fungroo. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
-```
